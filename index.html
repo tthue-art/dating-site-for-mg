@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#ffd6e8">
+<title>For မောင် 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+  html{height:100%}
+
+  :root{
+    --pink:#ff8ec4;
+    --pink-soft:#ffb8d9;
+    --purple:#b47aff;
+    --peach:#ffb088;
+    --blue:#7ec8ff;
+    --mint:#8ff0d6;
+    --cream:#fffaf5;
+    --ink:#3a1a2e;
+    --muted:#8a6b7f;
+  }
+
+  body{
+    min-height:100dvh;
+    font-family:'Noto Sans Myanmar','Poppins',system-ui,sans-serif;
+    font-weight:400;
+    color:var(--ink);
+    background: #ffe6f2;
+    background-image:
+      radial-gradient(circle at 10% 10%, rgba(255,142,196,.55) 0%, transparent 35%),
+      radial-gradient(circle at 90% 15%, rgba(180,122,255,.45) 0%, transparent 35%),
+      radial-gradient(circle at 15% 85%, rgba(126,200,255,.4) 0%, transparent 35%),
+      radial-gradient(circle at 85% 90%, rgba(255,176,136,.45) 0%, transparent 35%),
+      linear-gradient(160deg, #fff0f7 0%, #ffe0f0 40%, #e8ddff 100%);
+    background-attachment:fixed;
+    display:flex;justify-content:center;align-items:flex-start;
+    padding:calc(env(safe-area-inset-top) + 24px) 16px calc(env(safe-area-inset-bottom) + 24px);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    letter-spacing:.15px;
+  }
+
+  #bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+
+  .petal{
+    position:absolute;bottom:-60px;opacity:0;
+    animation:rise linear forwards;
+    will-change:transform,opacity;
+    filter: drop-shadow(0 4px 8px rgba(255,142,196,.4));
+  }
+  @keyframes rise{
+    0%{transform:translateY(0) rotate(0) scale(1);opacity:0}
+    15%{opacity:.95}
+    85%{opacity:.95}
+    100%{transform:translateY(-118vh) rotate(360deg) scale(.7);opacity:0}
+  }
+
+  .sticker{
+    position:fixed;pointer-events:none;
+    font-size:32px;opacity:0;
+    z-index:1;
+    filter: drop-shadow(0 6px 14px rgba(255,142,196,.5));
+    will-change:transform,opacity;
+  }
+  .sticker.bounce{ animation: stBounce 10s ease-in-out infinite; }
+  .sticker.wiggle{ animation: stWiggle 8s ease-in-out infinite; }
+  .sticker.spin{ animation: stSpin 14s linear infinite; }
+  .sticker.float{ animation: stFloat 11s ease-in-out infinite; }
+  .sticker.pulse{ animation: stPulse 7s ease-in-out infinite; }
+
+  @keyframes stBounce{
+    0%{transform:translate(0,0) rotate(0);opacity:0}
+    10%{opacity:.9}
+    25%{transform:translate(20px,-40px) rotate(15deg) scale(1.1);opacity:.9}
+    50%{transform:translate(-10px,-80px) rotate(-10deg) scale(.95);opacity:.9}
+    75%{transform:translate(15px,-30px) rotate(20deg) scale(1.05);opacity:.9}
+    90%{opacity:.9}
+    100%{transform:translate(0,-120px) rotate(0);opacity:0}
+  }
+  @keyframes stWiggle{
+    0%,100%{transform:translateY(0) rotate(-12deg);opacity:.9}
+    25%{transform:translateY(-15px) rotate(12deg);opacity:.9}
+    50%{transform:translateY(-25px) rotate(-8deg);opacity:.9}
+    75%{transform:translateY(-10px) rotate(15deg);opacity:.9}
+  }
+  @keyframes stSpin{
+    0%{transform:rotate(0) scale(1);opacity:.9}
+    50%{transform:rotate(180deg) scale(1.15);opacity:.9}
+    100%{transform:rotate(360deg) scale(1);opacity:.9}
+  }
+  @keyframes stFloat{
+    0%,100%{transform:translate(0,0) rotate(0);opacity:0}
+    10%{opacity:.9}
+    50%{transform:translate(-30px,-50px) rotate(-20deg);opacity:.9}
+    90%{opacity:.9}
+    100%{transform:translate(10px,-90px) rotate(15deg);opacity:0}
+  }
+  @keyframes stPulse{
+    0%,100%{transform:scale(1) rotate(0);opacity:.85}
+    50%{transform:scale(1.3) rotate(10deg);opacity:1}
+  }
+
+  .pop-sticker{
+    position:fixed;pointer-events:none;
+    font-size:36px;z-index:9998;
+    animation: popIn 1.2s cubic-bezier(.34,1.56,.64,1) forwards;
+    filter: drop-shadow(0 8px 16px rgba(255,142,196,.6));
+  }
+  @keyframes popIn{
+    0%{transform:translate(-50%,-50%) scale(0) rotate(-180deg);opacity:0}
+    60%{transform:translate(-50%,-50%) scale(1.3) rotate(15deg);opacity:1}
+    100%{transform:translate(-50%,-50%) scale(1) rotate(0);opacity:0}
+  }
+
+  .float-msg{
+    position:fixed;pointer-events:none;
+    font-family:'Caveat',cursive;
+    font-size:18px;
+    font-weight:600;
+    color:#3a1a2e;
+    background:linear-gradient(180deg,#fff,#fff5fa);
+    padding:14px 24px;
+    border-radius:999px;
+    border:1.5px solid rgba(255,142,196,.55);
+    box-shadow:
+      0 12px 36px -8px rgba(255,142,196,.55),
+      0 4px 12px -4px rgba(180,80,140,.25);
+    z-index:9999;
+    white-space:nowrap;
+    transform:translate(-50%,-50%);
+    max-width:90vw;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    letter-spacing:.3px;
+    transition:opacity .35s ease, transform .35s ease;
+    animation: msgFloat 5.5s cubic-bezier(.34,1.56,.64,1) forwards;
+  }
+  .float-msg.out{
+    animation:none;
+    opacity:0;
+    transform:translate(-50%,-90%) scale(.92);
+  }
+  @keyframes msgFloat{
+    0%{opacity:0;transform:translate(-50%,-30%) scale(.85)}
+    10%{opacity:1;transform:translate(-50%,-55%) scale(1)}
+    80%{opacity:1;transform:translate(-50%,-100%) scale(1)}
+    100%{opacity:0;transform:translate(-50%,-170%) scale(.97)}
+  }
+
+  .card{
+    position:relative;z-index:2;margin:auto;
+    width:100%;max-width:420px;
+    background: rgba(255,255,255,0.55);
+    -webkit-backdrop-filter: blur(28px) saturate(1.8);
+    backdrop-filter: blur(28px) saturate(1.8);
+    border: 1.5px solid rgba(255,255,255,0.9);
+    border-radius: 36px;
+    padding: 34px 26px 30px;
+    box-shadow:
+      0 24px 60px -20px rgba(180,80,140,.35),
+      0 8px 20px -8px rgba(180,80,140,.15),
+      inset 0 1px 0 rgba(255,255,255,1),
+      inset 0 -1px 0 rgba(255,255,255,.5);
+    text-align:center;
+    overflow:hidden;
+  }
+  .card::before{
+    content:'';position:absolute;
+    top:-50%;left:-50%;width:200%;height:200%;
+    background: radial-gradient(circle at 30% 20%, rgba(255,142,196,.25), transparent 40%),
+                radial-gradient(circle at 70% 80%, rgba(180,122,255,.2), transparent 40%);
+    pointer-events:none;
+    animation: cardGlow 12s ease-in-out infinite;
+  }
+  @keyframes cardGlow{
+    0%,100%{transform:rotate(0deg) scale(1)}
+    50%{transform:rotate(180deg) scale(1.1)}
+  }
+
+  .step{
+    display:flex;justify-content:center;align-items:center;gap:7px;
+    margin-bottom:26px; position:relative; z-index:1;
+  }
+  .s-dot{
+    width:8px;height:8px;border-radius:50%;
+    background: rgba(255,142,196,.3);
+    transition: all .5s cubic-bezier(.34,1.56,.64,1);
+  }
+  .s-dot.active{
+    width:28px;border-radius:6px;
+    background: linear-gradient(90deg,#ff8ec4,#b47aff);
+    box-shadow: 0 4px 14px rgba(255,142,196,.6);
+  }
+  .s-dot.done{ background: linear-gradient(90deg,#ff8ec4,#b47aff); opacity:.75; }
+
+  .screen{display:none; position:relative; z-index:1;}
+  .screen.active{display:block; animation: screenIn .7s cubic-bezier(.34,1.56,.64,1) both;}
+  @keyframes screenIn{
+    from{opacity:0; transform: translateY(20px) scale(.96)}
+    to{opacity:1; transform: none}
+  }
+
+  .hero-icon{
+    font-size: 64px; line-height:1;
+    display:inline-block;
+    margin-bottom: 8px;
+    animation: heroBounce 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(255,142,196,.5));
+  }
+  @keyframes heroBounce{
+    0%,100%{transform: translateY(0) rotate(-5deg)}
+    50%{transform: translateY(-10px) rotate(5deg)}
+  }
+
+  .script{
+    font-family:'Caveat',cursive;
+    font-size:26px;
+    color: #b47aff;
+    line-height:1.3;
+    margin-bottom: 8px;
+    letter-spacing: .5px;
+    font-weight: 600;
+  }
+
+  h1{
+    font-family:'Noto Sans Myanmar',sans-serif;
+    font-size: 20px; line-height:1.8;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: .2px;
+    margin-bottom: 10px;
+  }
+  h1 em{
+    font-style: normal;
+    background: linear-gradient(135deg,#ff8ec4,#b47aff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  .sub{
+    font-size: 13.5px; line-height: 1.9;
+    font-weight: 400;
+    color: var(--muted);
+    margin-bottom: 26px;
+    letter-spacing: .2px;
+  }
+
+  .btn{
+    border:none; border-radius: 100px;
+    font-family:'Noto Sans Myanmar',sans-serif;
+    font-weight: 600; letter-spacing: .4px;
+    cursor: pointer;
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1),
+                box-shadow .35s, background .35s, color .3s;
+    -webkit-user-select:none; user-select:none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary{
+    padding: 15px 30px; font-size: 14.5px;
+    color: #fff;
+    background: linear-gradient(135deg,#ff8ec4 0%,#b47aff 100%);
+    box-shadow:
+      0 10px 26px -6px rgba(255,142,196,.65),
+      0 4px 10px -2px rgba(180,122,255,.4),
+      inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .btn-primary::before{
+    content:''; position:absolute;
+    top:0; left:-130%; width:60%; height:100%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);
+    animation: shine 3.5s infinite;
+  }
+  @keyframes shine{ 100%{ left:240%; } }
+  .btn-primary:active{
+    transform: translateY(2px) scale(.98);
+    box-shadow: 0 5px 14px -4px rgba(255,142,196,.6);
+  }
+  .btn-primary:disabled{
+    opacity:.45; cursor:not-allowed; transform:none;
+    box-shadow:none;
+  }
+  .btn-primary:disabled::before{ display:none; }
+
+  .btn-block{ width:100%; display:block; margin-top: 12px; }
+
+  #toIdeas, #toResult{
+    width: auto;
+    min-width: 180px;
+    max-width: 80%;
+    display: inline-block;
+    margin: 16px auto 0;
+    padding: 13px 28px;
+    font-size: 13.5px;
+  }
+
+  #shareBtn{ padding: 14px 24px; font-size: 13.5px; margin-top: 8px; }
+  #copyBtn{ padding: 11px 20px; font-size: 12.5px; margin-top: 8px; }
+
+  .btn-outline{
+    padding: 12px 22px; font-size: 13px;
+    color: #b47aff;
+    background: rgba(255,255,255,0.55);
+    border: 1.5px solid rgba(180,122,255,.45);
+    font-weight: 600;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .btn-outline:active{
+    background: rgba(255,255,255,.85);
+    transform: scale(.97);
+  }
+  .btn-outline.done{
+    color: #2da876; border-color: rgba(45,168,118,.6);
+    background: rgba(45,168,118,.1);
+  }
+
+  .btn-ghost{
+    padding: 8px 16px; font-size: 12px;
+    color: var(--muted);
+    background: transparent; border: none;
+    font-family:'Caveat',cursive;
+    font-weight: 600; letter-spacing: .2em;
+    text-transform: lowercase;
+    transition: color .3s;
+  }
+  .btn-ghost:active{ color: #b47aff; }
+
+  .choice{
+    display: flex; gap: 12px; justify-content: center; align-items: center;
+    flex-wrap: wrap; margin-top: 6px; min-height: 80px;
+    position: relative;
+  }
+  #yesBtn{
+    min-width: 160px;
+    transition: transform .5s cubic-bezier(.34,1.56,.64,1),
+                box-shadow .4s, padding .4s;
+  }
+
+  #noBtn{
+    min-width: 118px; padding: 15px 24px; font-size: 13.5px;
+    color: #b47aff;
+    background: rgba(255,255,255,0.55);
+    border: 1.5px solid rgba(180,122,255,.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    letter-spacing: .5px;
+    transition:
+      left .45s cubic-bezier(.34,1.56,.64,1),
+      top .45s cubic-bezier(.34,1.56,.64,1),
+      transform .3s, background .3s, border-color .3s, opacity .4s;
+    z-index: 1;
+  }
+  #noBtn.moving{
+    color: #fff;
+    background: linear-gradient(135deg,#ff8ec4,#b47aff);
+    border: none;
+    box-shadow:
+      0 20px 50px -12px rgba(255,142,196,.7),
+      0 8px 20px -6px rgba(180,122,255,.5);
+    font-weight: 600;
+  }
+
+  .hint{
+    font-family:'Caveat',cursive;
+    font-size: 17px; font-weight: 600;
+    color: var(--muted);
+    margin-top: 22px; min-height: 26px;
+    line-height: 1.7; transition: .4s;
+    letter-spacing: .3px;
+  }
+  .hint .counter{
+    font-family:'Poppins',sans-serif;
+    color: #b47aff; font-weight: 700;
+    letter-spacing: .15em;
+    font-size: 12px;
+    background: rgba(180,122,255,.15);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 6px;
+  }
+
+  .field{ display:block; text-align:left; margin-bottom: 16px; }
+  .field span{
+    display: block;
+    font-family:'Poppins',sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #b47aff;
+    margin-bottom: 8px;
+    padding-left: 4px;
+  }
+  input[type=date], input[type=time]{
+    width: 100%; padding: 14px 18px;
+    border: 1.5px solid rgba(180,122,255,.25);
+    border-radius: 16px;
+    background: rgba(255,255,255,.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    font-family:'Noto Sans Myanmar',sans-serif;
+    font-size: 15px; font-weight: 500;
+    color: var(--ink); outline: none;
+    -webkit-appearance: none; appearance: none;
+    transition: .3s;
+  }
+  input:focus{
+    border-color: #b47aff;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(180,122,255,.15);
+  }
+  input::-webkit-calendar-picker-indicator{
+    opacity: .6;
+    filter: hue-rotate(280deg) saturate(1.5);
+  }
+
+  .ideas-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-height: 56vh;
+    overflow-y: auto;
+    padding: 4px 6px 10px 4px;
+    margin-bottom: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(180,122,255,.4) transparent;
+    text-align: left;
+  }
+  .ideas-grid::-webkit-scrollbar{ width: 5px; }
+  .ideas-grid::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg,#ff8ec4,#b47aff);
+    border-radius: 10px;
+  }
+
+  .idea-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 10px 14px;
+    background: rgba(255,255,255,0.55);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(255,255,255,0.85);
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(.34,1.56,.64,1);
+    overflow: hidden;
+    min-height: 128px;
+    text-align: center;
+    box-shadow: 0 4px 14px -6px rgba(180,80,140,.15);
+  }
+
+  .idea-card::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,142,196,.15), rgba(180,122,255,.15));
+    opacity: 0;
+    transition: opacity .4s;
+    pointer-events: none;
+  }
+
+  .idea-card:hover{
+    transform: translateY(-4px) scale(1.03);
+    border-color: rgba(180,122,255,.6);
+    box-shadow: 0 16px 32px -12px rgba(255,142,196,.5);
+  }
+
+  .idea-card:active{ transform: scale(.96); }
+
+  .idea-card.selected{
+    background: linear-gradient(135deg, rgba(255,142,196,.35), rgba(180,122,255,.35));
+    border-color: #b47aff;
+    box-shadow:
+      0 0 0 2px rgba(180,122,255,.5),
+      0 16px 36px -10px rgba(255,142,196,.6);
+    transform: translateY(-5px);
+  }
+  .idea-card.selected::before{ opacity: 1; }
+
+  .idea-card .num-badge{
+    position: absolute;
+    top: 8px; left: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg,#ff8ec4,#b47aff);
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: .1em;
+    box-shadow: 0 3px 8px rgba(255,142,196,.4);
+  }
+
+  .idea-card .emoji{
+    font-size: 32px;
+    line-height: 1;
+    display: inline-block;
+    transition: transform .4s cubic-bezier(.34,1.56,.64,1);
+    filter: drop-shadow(0 4px 8px rgba(255,142,196,.35));
+    animation: emojiFloat 3s ease-in-out infinite;
+  }
+  @keyframes emojiFloat{
+    0%,100%{ transform: translateY(0) rotate(0); }
+    50%{ transform: translateY(-4px) rotate(6deg); }
+  }
+
+  .idea-card.selected .emoji{
+    animation: emojiPop .6s cubic-bezier(.34,1.56,.64,1) both,
+               emojiWiggle 1.5s ease-in-out infinite .6s;
+  }
+  @keyframes emojiPop{
+    0%{ transform: scale(1); }
+    50%{ transform: scale(1.5) rotate(20deg); }
+    100%{ transform: scale(1.25) rotate(0); }
+  }
+  @keyframes emojiWiggle{
+    0%,100%{ transform: scale(1.25) rotate(-10deg); }
+    50%{ transform: scale(1.25) rotate(10deg); }
+  }
+
+  .idea-card .label{
+    font-family: 'Noto Sans Myanmar', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.5;
+    transition: color .3s;
+    padding: 0 4px;
+  }
+  .idea-card.selected .label{
+    color: #b47aff;
+    font-weight: 600;
+  }
+
+  .idea-card .check-badge{
+    position: absolute;
+    top: 8px; right: 8px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    border: 1.5px solid rgba(180,122,255,.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s cubic-bezier(.34,1.56,.64,1);
+  }
+  .idea-card .check-badge svg{
+    width: 10px; height: 10px;
+    stroke: #fff; stroke-width: 3;
+    fill: none; stroke-linecap: round; stroke-linejoin: round;
+    opacity: 0; transform: scale(0);
+    transition: all .4s cubic-bezier(.34,1.56,.64,1);
+  }
+  .idea-card.selected .check-badge{
+    background: linear-gradient(135deg,#ff8ec4,#b47aff);
+    border-color: transparent;
+    box-shadow: 0 0 14px rgba(255,142,196,.8);
+    transform: rotate(360deg) scale(1.15);
+  }
+  .idea-card.selected .check-badge svg{
+    opacity: 1; transform: scale(1);
+  }
+
+  .ideas-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-family: 'Caveat', cursive;
+    font-size: 17px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .ideas-header .badge{
+    background: rgba(180,122,255,.12);
+    border: 1.5px solid rgba(180,122,255,.35);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #b47aff;
+    transition: all .3s;
+  }
+  .ideas-header .badge.has{
+    background: linear-gradient(135deg,#ff8ec4,#b47aff);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(255,142,196,.5);
+  }
+
+  .summary{
+    background: rgba(255,255,255,0.55);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(255,255,255,0.85);
+    border-radius: 22px;
+    padding: 8px 20px;
+    margin: 8px 0 18px;
+    text-align: left;
+    box-shadow: 0 8px 24px -10px rgba(180,80,140,.2);
+  }
+  .summary-row{
+    display: flex; gap: 12px; padding: 13px 0;
+    border-bottom: 1px dashed rgba(180,122,255,.25);
+    font-size: 13px;
+    align-items: baseline;
+  }
+  .summary-row:last-child{ border-bottom: none; }
+  .summary-row .k{
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .1em;
+    color: #b47aff;
+    white-space: nowrap;
+  }
+  .summary-row .v{
+    font-weight: 500; margin-left: auto; text-align: right;
+    color: var(--ink);
+    letter-spacing: .15px;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .summary-title{
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: #b47aff;
+    margin-bottom: 8px;
+    text-align: center;
+    letter-spacing: .5px;
+    font-weight: 700;
+  }
+
+  .divider{
+    display: flex; align-items: center; gap: 12px;
+    margin: 14px 0 6px;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    color: #b47aff;
+    font-weight: 600;
+    opacity: .75;
+  }
+  .divider::before, .divider::after{
+    content:''; flex: 1; height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(180,122,255,.4), transparent);
+  }
+
+  .toast{
+    position: fixed; bottom: 36px; left: 50%;
+    transform: translate(-50%, 80px);
+    background: linear-gradient(135deg,#ff8ec4,#b47aff);
+    color: #fff;
+    font-size: 13px; font-weight: 600;
+    padding: 14px 26px; border-radius: 100px;
+    box-shadow:
+      0 20px 50px -12px rgba(255,142,196,.7),
+      inset 0 1px 0 rgba(255,255,255,.3);
+    opacity: 0; transition: .5s cubic-bezier(.34,1.56,.64,1);
+    z-index: 10000; white-space: nowrap;
+    letter-spacing: .4px;
+  }
+  .toast.show{ transform: translate(-50%,0); opacity: 1; }
+
+  .music-btn{
+    position: fixed; bottom: 24px; right: 24px; z-index: 10000;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: linear-gradient(135deg,#ff8ec4,#b47aff);
+    border: 2px solid rgba(255,255,255,.8);
+    box-shadow:
+      0 12px 28px -8px rgba(255,142,196,.7),
+      inset 0 1px 0 rgba(255,255,255,.4);
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    display: flex; justify-content: center; align-items: center;
+    transition: all .4s cubic-bezier(.34,1.56,.64,1);
+    font-weight: 700;
+  }
+  .music-btn:active{ transform: scale(.9); }
+  .music-btn.playing{ animation: musicPulse 2s ease-in-out infinite; }
+  @keyframes musicPulse{
+    0%,100%{ box-shadow: 0 12px 28px -8px rgba(255,142,196,.7), 0 0 0 0 rgba(255,142,196,.6); }
+    50%{ box-shadow: 0 12px 28px -8px rgba(255,142,196,.7), 0 0 0 14px rgba(255,142,196,0); }
+  }
+</style>
+</head>
+<body>
+
+<div id="bg" aria-hidden="true"></div>
+<div class="toast" id="toast"></div>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="my_song.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-btn" aria-label="Music">♪</button>
+
+<main class="card" id="cardEl">
+
+  <!-- ============ အဆင့် ၁ - ဖိတ်စာ ============ -->
+  <section class="screen active">
+    <div class="step">
+      <span class="s-dot active"></span>
+      <span class="s-dot"></span>
+      <span class="s-dot"></span>
+      <span class="s-dot"></span>
+    </div>
+
+    <div class="hero-icon">💌</div>
+    <div class="script">Just for you</div>
+
+    <h1>
+      မောင် ရေ...<br>
+      <em>မင်းနဲ့အတူတူ ရှိချင်နေတယ်</em>
+    </h1>
+    <p class="sub">ဒါကြောင့်... ငါနဲ့ Date လုပ်ပေးမလား မောင်? 🥺</p>
+
+    <div class="choice">
+      <button class="btn btn-primary" id="yesBtn">ဟုတ်ကဲ့ 💕</button>
+      <button class="btn" id="noBtn">မလုပ်ဘူး</button>
+    </div>
+
+    <p class="hint" id="hint">မောင် ရေ... ငါ့ကို အခွင့်အရေးလေး ပေးပါနော်... 🥺</p>
+  </section>
+
+  <!-- ============ အဆင့် ၂ - ရက်၊ အချိန် ============ -->
+  <section class="screen">
+    <div class="step">
+      <span class="s-dot done"></span>
+      <span class="s-dot active"></span>
+      <span class="s-dot"></span>
+      <span class="s-dot"></span>
+    </div>
+
+    <div class="hero-icon">📅</div>
+    <div class="script">When shall we meet?</div>
+
+    <h1>မောင် ဘယ်နေ့ ဘယ်အချိန် လဲ?</h1>
+    <p class="sub">မင်း အဆင်ပြေတဲ့ အချိန်လေး ရွေးပေးနော် ⏰</p>
+
+    <label class="field">
+      <span>Date · ရက်</span>
+      <input type="date" id="dateInput">
+    </label>
+    <label class="field">
+      <span>Time · အချိန်</span>
+      <input type="time" id="timeInput" value="18:00">
+    </label>
+
+    <button class="btn btn-primary" id="toIdeas" disabled>ဆက်သွားမယ် →</button>
+  </section>
+
+  <!-- ============ အဆင့် ၃ - အစီအစဉ် ရွေးခြင်း ============ -->
+  <section class="screen">
+    <div class="step">
+      <span class="s-dot done"></span>
+      <span class="s-dot done"></span>
+      <span class="s-dot active"></span>
+      <span class="s-dot"></span>
+    </div>
+
+    <div class="hero-icon">💌</div>
+    <div class="script">What shall we do?</div>
+
+    <h1>မောင် ဘာလုပ်ချင်လဲ?</h1>
+    <p class="sub">ကြိုက်တဲ့ အစီအစဉ်လေးတွေ ရွေးပေးနော် ✨</p>
+
+    <div class="ideas-header">
+      <span>ရွေးထားသည်</span>
+      <span class="badge" id="ideasCount">0</span>
+    </div>
+
+    <div class="ideas-grid" id="ideasGrid"></div>
+
+    <button class="btn btn-primary" id="toResult" disabled>ဆက်သွားမယ် →</button>
+  </section>
+
+  <!-- ============ အဆင့် ၄ - အတည်ပြုချက် ============ -->
+  <section class="screen">
+    <div class="step">
+      <span class="s-dot done"></span>
+      <span class="s-dot done"></span>
+      <span class="s-dot done"></span>
+      <span class="s-dot active"></span>
+    </div>
+
+    <div class="hero-icon">🎉</div>
+    <div class="script">It&#39;s a date</div>
+
+    <h1>မောင် အတွက် <em>အဆင်သင့်ပဲ 🎉</em></h1>
+    <p class="sub">ငါ အခုပဲ ပြင်ဆင်လိုက်တော့မယ်နော်</p>
+
+    <div class="summary" id="summary"></div>
+
+    <button class="btn btn-primary btn-block" id="shareBtn">ငါ့ဆီ ပြန်ပို့ပေးပါ 💌</button>
+    <div class="divider">or</div>
+    <button class="btn btn-outline btn-block" id="copyBtn">အစီအစဉ်ကို သိမ်းဆည်းမယ် 📋</button>
+    <button class="btn btn-ghost btn-block" id="againBtn">↺ ပြန်စမယ်</button>
+  </section>
+</main>
+
+<script>
+/* ================= Floating Stickers ================= */
+const bg = document.getElementById('bg');
+const PETALS = ['💕','✨','🌸','🎀','🦋','☁️','⭐','💖','🌷','🍓','🧸','🎈','💝','🌟','🩷'];
+
+function spawnPetal(){
+  const p = document.createElement('div');
+  p.className='petal';
+  p.textContent = PETALS[Math.floor(Math.random()*PETALS.length)];
+  p.style.left = Math.random()*100 + 'vw';
+  p.style.fontSize = (14 + Math.random()*16) + 'px';
+  const dur = 10 + Math.random()*8;
+  p.style.animationDuration = dur + 's';
+  bg.appendChild(p);
+  setTimeout(()=>p.remove(), (dur+1)*1000);
+}
+for(let i=0;i<15;i++) setTimeout(spawnPetal, i*250);
+setInterval(spawnPetal, 800);
+
+const BIG_STICKERS = ['💕','✨','🌸','🎀','🦋','☁️','⭐','💖','🌷','🍓','🧸','🎈','🩷','💝','🌟'];
+const ANIM_TYPES = ['bounce','wiggle','spin','float','pulse'];
+let stickerIndex = 0;
+
+function spawnSticker(){
+  const s = document.createElement('div');
+  s.className = 'sticker ' + ANIM_TYPES[Math.floor(Math.random()*ANIM_TYPES.length)];
+  s.textContent = BIG_STICKERS[stickerIndex % BIG_STICKERS.length];
+  stickerIndex++;
+  s.style.left = (5 + Math.random()*85) + 'vw';
+  s.style.top = (5 + Math.random()*80) + 'vh';
+  s.style.fontSize = (26 + Math.random()*20) + 'px';
+  const dur = 7 + Math.random()*6;
+  s.style.animationDuration = dur + 's';
+  s.style.animationDelay = (Math.random()*1.5) + 's';
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(), (dur+2)*1000);
+}
+for(let i=0;i<6;i++) setTimeout(spawnSticker, i*500);
+setInterval(spawnSticker, 1600);
+
+function popSticker(x, y, emoji){
+  const p = document.createElement('div');
+  p.className = 'pop-sticker';
+  p.textContent = emoji || PETALS[Math.floor(Math.random()*PETALS.length)];
+  p.style.left = x + 'px';
+  p.style.top = y + 'px';
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(), 1300);
+}
+
+/* ================= သီချင်း ================= */
+const music = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+let isPlaying = false;
+
+function playMusic(){
+  music.play().then(()=>{
+    musicBtn.textContent='❙❙';
+    musicBtn.classList.add('playing');
+    isPlaying=true;
+  }).catch(e=>console.log('Autoplay blocked:',e));
+}
+function toggleMusic(){
+  if(isPlaying){
+    music.pause();
+    musicBtn.textContent='♪';
+    musicBtn.classList.remove('playing');
+    isPlaying=false;
+  }else{ playMusic(); }
+}
+musicBtn.addEventListener('click', toggleMusic);
+
+/* ================= မျက်နှာပြင် ထိန်းချုပ်မှု ================= */
+const screens = [...document.querySelectorAll('.screen')];
+let current = 0;
+function goTo(i){
+  screens[current].classList.remove('active');
+  current = i;
+  screens[current].classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+  for(let k=0;k<5;k++){
+    setTimeout(()=>{
+      popSticker(
+        window.innerWidth * (0.15 + Math.random()*0.7),
+        window.innerHeight * (0.15 + Math.random()*0.5),
+        PETALS[Math.floor(Math.random()*PETALS.length)]
+      );
+    }, k*150);
+  }
+}
+
+/* ================= No ခလုတ် ================= */
+const yesBtn = document.getElementById('yesBtn');
+const noBtn  = document.getElementById('noBtn');
+const hint   = document.getElementById('hint');
+
+const YES_TEXTS = [
+  'ဟုတ်ကဲ့ 💕',
+  'ငါလည်း စောင့်နေတာ 🥰',
+  'အဆင်သင့်ပဲ 💖',
+  'လာခဲ့မယ်နော် 💘',
+  'ဟုတ်ကဲ့ပါ 💕'
+];
+
+/* ⭐ "မောင်" ကို လက်ခံသူအနေနဲ့ ပြောတဲ့ စာသားများ ⭐ */
+const SWEET = [
+  'မောင် ရေ... ငါ့ကို အခွင့်အရေးလေး ပေးပါနော်... 🥺',
+  'မောင် အတွက် ငါ အမြဲ ရှိနေမယ်... ✨',
+  'တစ်ခါလောက် လိုက်ခဲ့ကြည့်ပါနော် မောင်... 💕',
+  'ငါ မောင် ကို စောင့်နေတာ ကြာပြီ... 🌸',
+  'ငါ့နှလုံးသားလေး မောင် ဆီမှာ ရှိနေတယ်... 💖'
+];
+
+/* ⭐ "မရဘူးနော်" - "မောင် ရေ" ဖြုတ်ပြီး emoji ပြန်ထည့်ထားပါတယ် ⭐ */
+const NO_REFUSE_TEXT = 'မရဘူးနော် 💕';
+
+/* ⭐ "ချစ်တယ်နော်" ဆိုတဲ့ စာသားကို လုံးဝ ဖြုတ်ထားပါတယ် ⭐ */
+const FINAL_TEXT = '';
+
+const HINTS_SOFT = [
+  'မောင် ရေ... ငါ့စကားလေး နားထောင်ပေးပါဦး... 🥺',
+  'မောင် ပြုံးရင် ငါ ပျော်တယ်ဆိုတာ သိလား... 💕',
+  'ငါ့နှလုံးသားလေး မောင် ဆီမှာ ရှိနေတယ်... ✨',
+  'တစ်ခါလောက် လိုက်ခဲ့ကြည့်ပါနော် မောင်... 🌸',
+  'မောင် အတွက် ငါ အမြဲ ရှိနေမယ်... 🥰'
+];
+
+const MAX_SWEET = 5;
+const TOTAL_DODGES = 3;
+
+let tapCount = 0;
+let dodgeCount = 0;
+let finalShown = false;
+let isFloating = false;
+
+function vibrate(ms){ if(navigator.vibrate) navigator.vibrate(ms); }
+
+/* ================= Floating Msg ================= */
+let currentMsgEl = null;
+let msgTimeoutId = null;
+
+function showMsg(x, y, text){
+  if(currentMsgEl){
+    const oldEl = currentMsgEl;
+    oldEl.classList.add('out');
+    setTimeout(()=>{ if(oldEl.parentNode) oldEl.remove(); }, 360);
+    currentMsgEl = null;
+  }
+  if(msgTimeoutId){
+    clearTimeout(msgTimeoutId);
+    msgTimeoutId = null;
+  }
+
+  const el = document.createElement('div');
+  el.className = 'float-msg';
+  el.textContent = text;
+  el.style.left = x + 'px';
+  el.style.top  = y + 'px';
+  document.body.appendChild(el);
+
+  const rect = el.getBoundingClientRect();
+  const pad = 8;
+  let fx = x, fy = y;
+  if(rect.left < pad) fx = x + (pad - rect.left);
+  if(rect.right > window.innerWidth - pad) fx = x - (rect.right - window.innerWidth + pad);
+  if(rect.top < pad) fy = y + (pad - rect.top);
+  if(rect.bottom > window.innerHeight - pad) fy = y - (rect.bottom - window.innerHeight + pad);
+  el.style.left = fx + 'px';
+  el.style.top  = fy + 'px';
+
+  currentMsgEl = el;
+
+  msgTimeoutId = setTimeout(()=>{
+    if(currentMsgEl === el) currentMsgEl = null;
+    if(el.parentNode) el.remove();
+  }, 5600);
+}
+
+/* ================= Final Message ================= */
+function showFinalMsg(){
+  finalShown = true;
+
+  if(FINAL_TEXT && FINAL_TEXT.trim() !== ''){
+    const el = document.createElement('div');
+    el.className = 'final-msg';
+    el.textContent = FINAL_TEXT;
+    el.style.left = (window.innerWidth / 2) + 'px';
+    el.style.top  = (window.innerHeight / 2) + 'px';
+    document.body.appendChild(el);
+  }
+
+  for(let i=0;i<20;i++){
+    setTimeout(()=>{
+      popSticker(
+        window.innerWidth * (0.1 + Math.random()*0.8),
+        window.innerHeight * (0.15 + Math.random()*0.6),
+        ['💖','💕','💗','❤️','✨','💘','🌸','🎀','💝','🌟'][Math.floor(Math.random()*10)]
+      );
+    }, i*90);
+  }
+
+  yesBtn.textContent = 'ဟုတ်ကဲ့ 💕';
+  yesBtn.style.transform = 'scale(1.15)';
+
+  noBtn.style.transition = 'opacity .3s ease, transform .3s ease';
+  noBtn.style.opacity = '0';
+  noBtn.style.transform = 'scale(0.5)';
+  setTimeout(()=>{
+    noBtn.style.display = 'none';
+    noBtn.style.visibility = 'hidden';
+  }, 320);
+
+  hint.textContent = 'တစ်ခါလောက် ငါ့အတွက် Yes လေးနှိပ်ကြည့်ပါနော် မောင်... 🥺';
+}
+
+/* ============================================================
+   No ခလုတ် ရှောင်ပြေးစေမည့် Function
+   ============================================================ */
+function escapeNo(){
+  const pad = 40;
+  const w = noBtn.offsetWidth  || 130;
+  const h = noBtn.offsetHeight || 52;
+  const maxX = Math.max(pad, window.innerWidth  - w - pad);
+  const maxY = Math.max(pad, window.innerHeight - h - pad);
+
+  const yR = yesBtn.getBoundingClientRect();
+  const ycx = yR.left + yR.width/2;
+  const ycy = yR.top + yR.height/2;
+
+  let x, y, t = 0;
+  do{
+    x = pad + Math.random() * (maxX - pad);
+    y = pad + Math.random() * (maxY - pad);
+    t++;
+  }while(t < 80 && Math.hypot(x + w/2 - ycx, y + h/2 - ycy) < 200);
+
+  if(!isFloating){
+    const rect = noBtn.getBoundingClientRect();
+
+    const ph = document.createElement('div');
+    ph.style.width  = rect.width  + 'px';
+    ph.style.height = rect.height + 'px';
+    ph.style.visibility = 'hidden';
+    ph.style.pointerEvents = 'none';
+    ph.style.flexShrink = '0';
+    ph.id = 'noBtnPlaceholder';
+    noBtn.parentNode.insertBefore(ph, noBtn);
+
+    document.body.appendChild(noBtn);
+
+    noBtn.style.transition = 'none';
+    noBtn.style.position = 'fixed';
+    noBtn.style.left = rect.left + 'px';
+    noBtn.style.top  = rect.top  + 'px';
+    noBtn.style.width = rect.width + 'px';
+    noBtn.style.margin = '0';
+    noBtn.style.zIndex = '9999';
+    noBtn.classList.add('moving');
+
+    isFloating = true;
+
+    void noBtn.offsetHeight;
+
+    noBtn.style.transition = '';
+
+    requestAnimationFrame(()=>{
+      requestAnimationFrame(()=>{
+        noBtn.style.left = x + 'px';
+        noBtn.style.top  = y + 'px';
+      });
+    });
+  } else {
+    noBtn.style.left = x + 'px';
+    noBtn.style.top  = y + 'px';
+  }
+}
+
+/* ================================================================
+   No ခလုတ် Handler
+   ================================================================ */
+['touchstart','mouseenter'].forEach(ev=>{
+  noBtn.addEventListener(ev, (e)=>{
+    e.preventDefault();
+    if(finalShown) return;
+
+    tapCount++;
+    vibrate(18);
+
+    const cx = e.clientX || (e.touches?.[0]?.clientX ?? window.innerWidth/2);
+    const cy = e.clientY || (e.touches?.[0]?.clientY ?? window.innerHeight/2);
+
+    /* ===== ၁-၅ ချက် : SWEET စာသားများ (No မပြေး) ===== */
+    if(tapCount <= MAX_SWEET){
+      showMsg(cx, cy, SWEET[tapCount-1]);
+      popSticker(cx, cy, ['💕','💖','✨','🌸','🥺'][Math.floor(Math.random()*5)]);
+      hint.innerHTML = `${HINTS_SOFT[tapCount-1]} <span class="counter">${String(tapCount).padStart(2,'0')} / 0${MAX_SWEET}</span>`;
+      yesBtn.style.transform = `scale(${Math.min(1 + tapCount*0.03, 1.2)})`;
+      yesBtn.textContent = YES_TEXTS[Math.min(tapCount, YES_TEXTS.length-1)];
+      return;
+    }
+
+    /* ===== ၆ ချက် : "မရဘူးနော် 💕" ပေါ်လာမည် (No မပြေးသေး) ===== */
+    if(tapCount === MAX_SWEET + 1){
+      showMsg(cx, cy, NO_REFUSE_TEXT);
+      popSticker(cx, cy, ['💕','💖','✨'][Math.floor(Math.random()*3)]);
+      noBtn.textContent = NO_REFUSE_TEXT;
+      hint.textContent = '"မရဘူးနော်" ကို ထိကြည့်လိုက်ပါ မောင် 💕';
+      yesBtn.style.transform = `scale(${Math.min(1 + tapCount*0.03, 1.22)})`;
+      return;
+    }
+
+    /* ===== ၇၊ ၈၊ ၉ ချက် : No က page တစ်ခုလုံး ပြေးမည် (၃ ကြိမ်) ===== */
+    if(dodgeCount < TOTAL_DODGES){
+      dodgeCount++;
+
+      showMsg(cx, cy, NO_REFUSE_TEXT);
+      popSticker(cx, cy, ['💕','💖','✨','🌸','🥺'][Math.floor(Math.random()*5)]);
+      noBtn.textContent = NO_REFUSE_TEXT;
+      yesBtn.style.transform = `scale(${Math.min(1 + tapCount*0.03, 1.25)})`;
+      yesBtn.textContent = YES_TEXTS[Math.min(tapCount, YES_TEXTS.length-1)];
+
+      if(dodgeCount === 1){
+        hint.textContent = 'ဟဲ့... No က ရှောင်ပြေးနေတယ်နော် မောင် 💕';
+      } else if(dodgeCount === 2){
+        hint.textContent = 'နောက်တစ်ချက်လေး ထိကြည့်ပါဦး မောင်... 💖';
+      } else if(dodgeCount === TOTAL_DODGES){
+        hint.textContent = 'နောက်ဆုံးတစ်ချက်လေး... မောင် ✨';
+      }
+
+      escapeNo();
+
+      if(dodgeCount >= TOTAL_DODGES){
+        setTimeout(showFinalMsg, 1100);
+      }
+      return;
+    }
+  }, {passive:false});
+});
+
+window.addEventListener('resize', ()=>{
+  if(isFloating && !finalShown) escapeNo();
+});
+
+/* ================= Yes ခလုတ် ================= */
+yesBtn.addEventListener('click', (e)=>{
+  vibrate([30,40,60]);
+  if(!isPlaying) playMusic();
+
+  const rect = yesBtn.getBoundingClientRect();
+  const cx = rect.left + rect.width/2;
+  const cy = rect.top + rect.height/2;
+  for(let i=0;i<8;i++){
+    setTimeout(()=>{
+      popSticker(
+        cx + (Math.random()-0.5)*160,
+        cy + (Math.random()-0.5)*80,
+        ['💖','💕','💗','❤️','✨','💘','🌸','🎀'][Math.floor(Math.random()*8)]
+      );
+    }, i*80);
+  }
+  for(let i=0;i<12;i++){
+    setTimeout(()=>{
+      popSticker(
+        Math.random()*window.innerWidth,
+        Math.random()*window.innerHeight*0.8,
+        PETALS[Math.floor(Math.random()*PETALS.length)]
+      );
+    }, i*70);
+  }
+
+  noBtn.style.opacity='0';
+  noBtn.style.transform='scale(.7)';
+  setTimeout(()=>noBtn.style.display='none', 500);
+  hint.textContent = '';
+  goTo(1);
+});
+
+/* ================= ရက်၊ အချိန် ================= */
+const dateInput = document.getElementById('dateInput');
+const timeInput = document.getElementById('timeInput');
+const toIdeas   = document.getElementById('toIdeas');
+
+const today = new Date();
+const iso = new Date(today.getTime() - today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+dateInput.min = iso;
+
+dateInput.addEventListener('change', ()=>{ toIdeas.disabled = !dateInput.value; });
+toIdeas.addEventListener('click', ()=>{ if(!dateInput.value) return; goTo(2); });
+
+const dateIdeas = [
+  { en: "Coffee date", my: "နွေးထွေးတဲ့ ကော်ဖီဆိုင်လေးမှာ ကော်ဖီသောက်မယ်", icon: "☕" },
+  { en: "Sunset walk", my: "နေဝင်ချိန် လမ်းလျှောက်ပြီး စကားပြောမယ်", icon: "🌅" },
+  { en: "Homemade dinner", my: "အတူတူ အိမ်မှာ ညစာချက်စားမယ်", icon: "🍽️" },
+  { en: "Movie night", my: "ရုပ်ရှင်ကြည့်မယ် ", icon: "🎬" },
+  { en: "Picnic", my: "ပန်းခြံမှာ ပစ်ကနစ်ထွက်မယ်", icon: "🧺" },
+  { en: "Bookstore date", my: "စာအုပ်ဆိုင်မှာ တစ်ယောက်အတွက် တစ်ယောက် စာအုပ်ရွေးပေးမယ်", icon: "📚" },
+  { en: "Bake together", my: "ရေခဲမုန့်ဆိုင်ထိုင်ပြီး အေးဆေးစကားပြောမယ်", icon: "🧁" },
+  { en: "Drive & music", my: "ကားပတ်မောင်းမယ်", icon: "🚗" },
+  { en: "Stargazing", my: "ကြယ်တွေကြည့်ရင်း အနာဂတ်အိပ်မက်တွေ ပြောမယ်", icon: "🌙" },
+  { en: "Little town trip", my: "ချစ်စရာကောင်းတဲ့ မြို့လေးတစ်ခု အလည်သွားမယ်", icon: "🏘️" },
+  { en: "Polaroid memories", my: " ဓာတ်ပုံရိုက်ပြီး အမှတ်တရတွေ ဖန်တီးမယ်", icon: "📸" },
+  { en: "Dessert date", my: "အချိုပွဲစားပြီး Date လုပ်ခြင်း", icon: "🍰" },
+  { en: "Try new activity", my: "အတူတူ အသစ်တစ်ခုကို စမ်းလုပ်ခြင်း", icon: "🧩" },
+  { en: "Hiking & nature", my: "တောင်တက်ခြင်း သို့မဟုတ် သဘာဝကို လေ့လာမယ်", icon: "🏔️" },
+  { en: "Game night", my: "အိမ်မှာပဲ ဂိမ်းကစားမယ်", icon: "🎮" },
+  { en: "Live event", my: "ဖျော်ဖြေပွဲ တစ်ခုခုကို သွားကြမယ်", icon: "🎟️" },
+  { en: "DIY craft", my: "အတူတူ DIY လုပ်ခြင်း သို့မဟုတ် ပန်းချီဆွဲခြင်း", icon: "🎨" },
+  { en: "City motorbike ride", my: "မြို့ထဲ ဆိုင်ကယ်နဲ့ လျှောက်လည်ခြင်း", icon: "🏍️" }
+];
+
+const ideasGrid = document.getElementById('ideasGrid');
+const toResult = document.getElementById('toResult');
+const ideasCountEl = document.getElementById('ideasCount');
+const selectedIdeas = new Set();
+
+dateIdeas.forEach((item, index) => {
+  const div = document.createElement('div');
+  div.className = 'idea-card';
+  div.dataset.index = index;
+  div.dataset.en = item.en;
+  div.dataset.my = item.my;
+
+  div.innerHTML = `
+    <div class="num-badge">${String(index+1).padStart(2,'0')}</div>
+    <div class="emoji">${item.icon}</div>
+    <div class="label">${item.my}</div>
+    <div class="check-badge">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+  `;
+
+  div.addEventListener('click', (e) => {
+    const rect = div.getBoundingClientRect();
+    const cx = rect.left + rect.width/2;
+    const cy = rect.top + rect.height/2;
+    
+    div.classList.toggle('selected');
+    
+    if (div.classList.contains('selected')) {
+      selectedIdeas.add(index);
+      vibrate(15);
+      for(let k=0;k<4;k++){
+        setTimeout(()=>{
+          popSticker(
+            cx + (Math.random()-0.5)*80,
+            cy + (Math.random()-0.5)*40,
+            ['💖','💕','✨','🌸','🎀','💗'][Math.floor(Math.random()*6)]
+          );
+        }, k*60);
+      }
+    } else {
+      selectedIdeas.delete(index);
+    }
+    
+    ideasCountEl.textContent = selectedIdeas.size;
+    if(selectedIdeas.size > 0) {
+      ideasCountEl.classList.add('has');
+    } else {
+      ideasCountEl.classList.remove('has');
+    }
+    
+    toResult.disabled = selectedIdeas.size === 0;
+  });
+
+  ideasGrid.appendChild(div);
+});
+
+/* ================= ရလဒ် ================= */
+const summaryEl = document.getElementById('summary');
+const MM_M = ['ဇန်နဝါရီ','ဖေဖော်ဝါရီ','မတ်','ဧပြီ','မေ','ဇွန်','ဇူလိုင်','ဩဂုတ်','စက်တင်ဘာ','အောက်တိုဘာ','နိုဝင်ဘာ','ဒီဇင်ဘာ'];
+const MM_D = ['တနင်္ဂနွေ','တနင်္လာ','အင်္ဂါ','ဗုဒ္ဓဟူး','ကြာသပတေး','သောကြာ','စနေ'];
+
+function fmtDate(v){
+  if(!v) return '-';
+  const [y,m,d] = v.split('-').map(Number);
+  const dt = new Date(y, m-1, d);
+  return `${MM_D[dt.getDay()]}၊ ${d} ${MM_M[m-1]} ${y}`;
+}
+function fmtTime(v){
+  if(!v) return '-';
+  let [h,mi] = v.split(':').map(Number);
+  const part = h<12?'မနက်':(h<16?'မွန်းလွဲ':(h<19?'ညနေ':'ည'));
+  let hh = h%12; if(hh===0) hh=12;
+  return `${part} ${hh}:${String(mi).padStart(2,'0')}`;
+}
+
+toResult.addEventListener('click', ()=>{
+  vibrate(28);
+  
+  const selectedItems = document.querySelectorAll('.idea-card.selected');
+  let ideasHtml = '';
+  selectedItems.forEach((item, i) => {
+    const emoji = item.querySelector('.emoji').textContent;
+    ideasHtml += `<div class="summary-row">
+                    <span class="k">${emoji} ${String(i+1).padStart(2,'0')}</span>
+                    <span class="v">${item.dataset.my}</span>
+                  </div>`;
+  });
+
+  summaryEl.innerHTML = `
+    <div class="summary-title">✦ မောင် အတွက် Date အစီအစဉ် ✦</div>
+    <div class="summary-row"><span class="k">📅 ရက်</span><span class="v">${fmtDate(dateInput.value)}</span></div>
+    <div class="summary-row"><span class="k">⏰ အချိန်</span><span class="v">${fmtTime(timeInput.value)}</span></div>
+    <div class="summary-row" style="border-bottom:none;"><span class="k">💌 လုပ်ဆောင်ချက်</span></div>
+    ${ideasHtml}
+  `;
+  
+  for(let i=0;i<20;i++) setTimeout(spawnPetal, i*55);
+  for(let i=0;i<10;i++) setTimeout(spawnSticker, i*150);
+  goTo(3);
+});
+
+/* ================= ကူးယူ ================= */
+const toast = document.getElementById('toast');
+function showToast(t){
+  toast.textContent = t;
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 2300);
+}
+
+function buildMessage(){
+  const selectedItems = document.querySelectorAll('.idea-card.selected');
+  let msg = `💕 မောင် အတွက် Date အစီအစဉ်လေး 💕\n\n`;
+  msg += `📅 ရက် — ${fmtDate(dateInput.value)}\n`;
+  msg += `⏰ အချိန် — ${fmtTime(timeInput.value)}\n\n`;
+  msg += `✦ လုပ်ဆောင်ချက်များ ✦\n`;
+  
+  selectedItems.forEach((item, i) => {
+    const emoji = item.querySelector('.emoji').textContent;
+    msg += `  ${emoji} ${item.dataset.my}\n`;
+  });
+
+  msg += `\nအားလုံး လုပ်ဖြစ်ပါစေ... 🥰`;
+  return msg;
+}
+
+document.getElementById('shareBtn').addEventListener('click', async ()=>{
+  const text = buildMessage();
+  vibrate(28);
+  if(navigator.share){
+    try{ await navigator.share({ title: 'မောင် အတွက် Date အစီအစဉ် 💕', text }); }catch(e){}
+  }else{
+    copyToClipboard(text).then(()=>{
+      showToast('ကူးယူပြီးပါပြီ — Messenger မှာ paste လိုက်ပါ 💌');
+    }).catch(()=>showToast('ကူးယူလို့မရပါဘူး'));
+  }
+});
+
+function copyToClipboard(text){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((res,rej)=>{
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText='position:fixed;left:-9999px;top:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    try{ document.execCommand('copy') ? res() : rej(); }catch(e){ rej(e); }
+    ta.remove();
+  });
+}
+
+document.getElementById('copyBtn').addEventListener('click', async ()=>{
+  const btn = document.getElementById('copyBtn');
+  const old = btn.textContent;
+  try{
+    await copyToClipboard(buildMessage());
+    vibrate(18);
+    btn.textContent = 'သိမ်းဆည်းပြီးပါပြီ ✓';
+    btn.classList.add('done');
+    showToast('ကူးယူပြီးပါပြီ');
+    setTimeout(()=>{ btn.textContent = old; btn.classList.remove('done'); }, 2500);
+  }catch(e){ showToast('ကူးယူလို့မရပါဘူး'); }
+});
+
+document.getElementById('againBtn').addEventListener('click', ()=>location.reload());
+</script>
+</body>
+</html>
